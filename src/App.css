@@ -1,0 +1,94 @@
+
+.Todo {
+  border: 1px solid black;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 220px;
+  margin-right: 200px;
+  font-size: 20px;
+}
+
+.AddTodo input {
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
+}
+.AddTodo {
+  text-align: center;
+  border: 1px solid #588BF0;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  box-shadow: 2px 2px 3px lightgrey;
+}
+.Todo .fa {
+  float: right;
+  font-weight: bolder;
+  font-size: x-large;
+  margin-right: 30px;
+}
+.Todo .fa:hover {
+  color: red;
+  cursor: pointer;
+}
+.Todo .container {
+  float: right;
+  margin-right: -65px;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.Todo .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.Todo .container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+.Todo .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.Todo .container input:checked ~ .checkmark {
+  background-color: black;
+}
+.Todo .container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.Todo .container input:checked ~ .checkmark:after {
+  display: block;
+}
+.Todo .container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.TodoContainer {
+  height: 400px;
+  overflow-y: scroll;
+}
